@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Raleway');
+
+html {
+  /*Default color for text*/
+  color: #0E2431;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+section {
+  /*One section === full screen*/
+  height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.big-word {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.red {
+  color: #EA4C4C
+}
+
+section:first-child {
+  background-color: #F5E4C3;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+section:nth-of-type(2n) {
+  background-color: #F5F5F5;
+}
+
+/* https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ */
+
+/* phone-only max-width: 599px
+tablet-portrait-up min-width: 600px
+tablet-landscape-up min-width: 900px
+desktop-up min-width: 1200px
+big-desktop-up min-width: 1800px */
+
+/* phone-only */
+@media screen and (max-width: 599px) {
+  h1 {
+    font-size: 4em;
+  }
+  .big-word {
+    font-size: 3.5em;
+  }
+  .homepage-flex {
+    flex-direction: column;
+  }
+  #profile-pic {
+    background-image: url("../img/profile_pic_small.jpg");
+  }
+}
+
+/* tablet-portrait-up */
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 5em;
+  }
+  .big-word {
+    font-size: 4.5em;
+  }
+  .homepage-flex {
+    flex-direction: column;
+  }
+  #profile-pic {
+    background-image: url("../img/profile_pic_small.jpg");
+  }
+}
+
+/* tablet-landscape-up min-width */
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 6em;
+  }
+  .big-word {
+    font-size: 4.5em;
+  }
+  .homepage-flex {
+    flex-direction: row;
+  }
+  #profile-pic {
+    background-image: url("../img/profile_pic_big.jpg");
+  }
+}
+
+/* desktop-up  */
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 7em;
+  }
+  .big-word {
+    font-size: 6em;
+  }
+  #profile-pic {
+    background-image: url("../img/profile_pic_big.jpg");
+  }
+}
+
+
+
+.homepage-flex {
+  /* Make this container occupy the full section' space. */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /*stretch the flex item to occupy their full cross direction.*/
+  align-items: stretch;
+}
+
+.homepage-flex-item {
+  overflow: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
+}
+
+#profile-pic {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+
+
+.grid-display {
+  display: grid;
+  /*number of column: auto-fill (=as much space as possible), size of each column: min is 200px, max is 1fraction.*/
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto)
+}
+
+.container>div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+/* color palette for later:  */
+/* F5E4C3 - FAF4D0 - FAF4D0 - EA4C4C - C14545  */
