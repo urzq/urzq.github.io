@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito|Raleway');
+
 html {
   /*Default color for text*/
   color: #0E2431;
-  font-size: 16px;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 0.07em;
 }
 
-section {
-  /*One section === full screen*/
-  height: 100vh;
+* {
+  box-sizing: border-box;
 }
 
 h1 {
@@ -21,10 +20,14 @@ p {
   margin: 0;
 }
 
+.medium-padding {
+  padding: 2em;
+}
+
 article {
   /* top right bottom left; */
-  padding: 6em 2em 2em 2em;
-  max-width: 80%;
+  padding: 6em 2em 6em 2em;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -39,16 +42,8 @@ mark {
   background: none;
 }
 
-.underline
-{
+.underline {
   text-decoration: underline;
-}
-
-section:first-child {
-  background-color: #d0d0d0;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: contain;
 }
 
 section:nth-of-type(2n) {
@@ -57,34 +52,20 @@ section:nth-of-type(2n) {
 
 /* https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ */
 
-/* phone-only max-width: 599px
-tablet-portrait-up min-width: 600px
-tablet-landscape-up min-width: 900px
-desktop-up min-width: 1200px
-big-desktop-up min-width: 1800px */
-
 /* phone-only */
-
 @media screen and (max-width: 599px) {
   h1 {
-    font-size: 3.7em;
+    font-size: 3.4em;
   }
   .big-word {
-    font-size: 3.2em;
+    font-size: 2.7em;
   }
   .medium-word {
     font-size: 1em;
   }
-  .homepage-flex {
-    flex-direction: column;
-  }
-  #profile-pic {
-    background-image: url("../img/profile_pic_small.jpg");
-  }
 }
 
 /* tablet-portrait-up */
-
 @media screen and (min-width: 600px) {
   h1 {
     font-size: 5em;
@@ -95,16 +76,9 @@ big-desktop-up min-width: 1800px */
   .medium-word {
     font-size: 1.5em;
   }
-  .homepage-flex {
-    flex-direction: column;
-  }
-  #profile-pic {
-    background-image: url("../img/profile_pic_small.jpg");
-  }
 }
 
 /* tablet-landscape-up min-width */
-
 @media screen and (min-width: 900px) {
   h1 {
     font-size: 6em;
@@ -115,16 +89,9 @@ big-desktop-up min-width: 1800px */
   .medium-word {
     font-size: 1.5em;
   }
-  .homepage-flex {
-    flex-direction: row;
-  }
-  #profile-pic {
-    background-image: url("../img/profile_pic_big.jpg");
-  }
 }
 
 /* desktop-up  */
-
 @media screen and (min-width: 1200px) {
   h1 {
     font-size: 7em;
@@ -132,34 +99,6 @@ big-desktop-up min-width: 1800px */
   .big-word {
     font-size: 6em;
   }
-  .medium-word {
-    font-size: 2em;
-  }
-  #profile-pic {
-    background-image: url("../img/profile_pic_big.jpg");
-  }
-}
-
-.homepage-flex {
-  /* Make this container occupy the full section' space. */
-  width: 100%;
-  height: 100%;
-  display: flex;
-  /*stretch the flex item to occupy their full cross direction.*/
-  align-items: stretch;
-}
-
-.homepage-flex-item {
-  overflow: auto;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 50%;
-}
-
-#profile-pic {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom right;
 }
 
 .grid-display {
@@ -176,7 +115,3 @@ big-desktop-up min-width: 1800px */
   background-color: rgb(207, 232, 220);
   border: 2px solid rgb(79, 185, 227);
 }
-
-/* color palette for later:  */
-
-/* F5E4C3 - FAF4D0 - FAF4D0 - EA4C4C - C14545  */

@@ -1,0 +1,76 @@
+section:first-child {
+    height: 100vh;
+    background-color: #d0d0d0;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+  }
+  
+/* phone-only */
+@media screen and (max-width: 599px) {
+    .homepage-flex {
+      flex-direction: column;
+    }
+    #profile-pic {
+      background-image: url("../img/profile_pic_small.jpg");
+    }
+  }
+  
+  /* tablet-portrait-up */
+  @media screen and (min-width: 600px) {
+    .homepage-flex {
+      flex-direction: column;
+    }
+    #profile-pic {
+      background-image: url("../img/profile_pic_small.jpg");
+    }
+  }
+  
+  /* tablet-landscape-up min-width */
+  @media screen and (min-width: 900px) {
+    .homepage-flex {
+      flex-direction: row;
+    }
+    #profile-pic {
+      background-image: url("../img/profile_pic_big.jpg");
+    }
+  }
+  
+  /* desktop-up  */
+  
+  @media screen and (min-width: 1200px) {
+    h1 {
+      font-size: 7em;
+    }
+    .big-word {
+      font-size: 6em;
+    }
+    .medium-word {
+      font-size: 2em;
+    }
+    #profile-pic {
+      background-image: url("../img/profile_pic_big.jpg");
+    }
+  }
+  
+  .homepage-flex {
+    /* Make this container occupy the full section' space. */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*stretch the flex item to occupy their full cross direction.*/
+    align-items: stretch;
+  }
+  
+  .homepage-flex-item {
+    overflow: visible;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+  }
+  
+  #profile-pic {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
