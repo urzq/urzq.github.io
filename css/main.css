@@ -19,6 +19,7 @@ h1 {
 p {
   margin: 0;
   font-size: 1.2em;
+  line-height: 1.4em;
 }
 
 .medium-padding {
@@ -31,6 +32,9 @@ article {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+
+  border-bottom: 1px solid rgb(185, 183, 183);
+
 }
 
 .big-word {

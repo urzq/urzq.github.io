@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 section:nth-child(3) {
-    background-color: #0E6BA8;
+    background-color:white;
 }
 
 .process-grid {
@@ -15,19 +15,27 @@ section:nth-child(3) {
     /* repeat(autofill, 50px)  defines as many 50px columns needed to fill its parent container. */
     /* minmax(200px, 1fr) defines a range that goes from 200px up to the full container's width (fr = fraction).*/
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 1em;
+    grid-gap: 1.5em;
     grid-auto-rows: auto;
 }
 
 .process-card {
-    /* border-radius: 5px; */
+    position: relative;
     padding: 10px;
     min-height: 240px;
-    background-color: #F5F5F5;
+    background-color: white;
+    
+    
+    /* border-radius: 5px; */
     border: 1px solid #EFEFEF;
-
-    position: relative;
+    /*offset x, offset y, blur radius, color*/
+    box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
+
+.process-card:hover {
+    box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.2);
+  }
 
 .process-card-text {
     position: absolute;
