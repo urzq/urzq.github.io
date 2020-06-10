@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 section:nth-child(3) {
-    background-color:white;
+    background-color: #F5F5F5;
 }
 
 .process-grid {
@@ -14,7 +14,7 @@ section:nth-child(3) {
     /* repeat(3, 50px): defines 3 50px column .*/
     /* repeat(autofill, 50px)  defines as many 50px columns needed to fill its parent container. */
     /* minmax(200px, 1fr) defines a range that goes from 200px up to the full container's width (fr = fraction).*/
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     grid-gap: 1.5em;
     grid-auto-rows: auto;
 }
@@ -25,8 +25,6 @@ section:nth-child(3) {
     min-height: 240px;
     background-color: white;
     
-    
-    /* border-radius: 5px; */
     border: 1px solid #EFEFEF;
     /*offset x, offset y, blur radius, color*/
     box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
