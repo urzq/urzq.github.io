@@ -1,19 +1,19 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 section:nth-child(3) {
     background-color: #0E6BA8;
-}
-
-section:nth-child(3)  p {
-    color: #F5F5F5;
 }
 
 .process-grid {
     margin-top: 4em;
     display: grid;
     /*https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids*/
-    /*grid-template-column: attend une liste de tailles de colonnes.*/
-    /* repeat(3, 50px):; définit 3 colonnes de 50px*/
-    /* repeat(autofill, 50px) définit (grosso merdo) autant de colonnes de 50px qu'il en faut pour remplir la taille du conteneur parent*/
-    /*number of column: auto-fill (=as much space as possible), size of each column: min is 200px, max is 1fraction.*/
+    /*grid-template-column: expects a list of columns size.*/
+    /* repeat(3, 50px): defines 3 50px column .*/
+    /* repeat(autofill, 50px)  defines as many 50px columns needed to fill its parent container. */
+    /* minmax(200px, 1fr) defines a range that goes from 200px up to the full container's width (fr = fraction).*/
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 1em;
     grid-auto-rows: auto;
@@ -22,7 +22,33 @@ section:nth-child(3)  p {
 .process-card {
     /* border-radius: 5px; */
     padding: 10px;
-    height: 200px;
+    min-height: 240px;
     background-color: #F5F5F5;
     border: 1px solid #EFEFEF;
+
+    position: relative;
+}
+
+.process-card-text {
+    position: absolute;
+    bottom: 0.7em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+.process-card-flex {
+    /*Center the svg horizontally and vertically.*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.process-card>img {
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
