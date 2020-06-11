@@ -2,10 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-section:nth-child(3) {
-    background-color: #F5F5F5;
-}
-
 .process-grid {
     margin-top: 4em;
     display: grid;
