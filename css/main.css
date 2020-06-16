@@ -16,11 +16,19 @@ h1 {
   font-family: 'Nunito', sans-serif;
 }
 
+h5 {
+  margin: 0;
+}
+
 p {
   margin: 0;
   margin-bottom: 1em;
   font-size: 1.2em;
   line-height: 1.4em;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
 }
 
 .medium-padding {
@@ -29,7 +37,7 @@ p {
 
 article {
   /* top right bottom left; */
-  padding: 6em 2em 5em 2em;
+  padding: 6em 2em 6em 2em;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -45,40 +53,87 @@ mark {
   background: none;
 }
 
+section {
+  background-color: white;
+}
 
-.section-secondary {
+.section-primary {
   background-color: #28536b;
 }
 
-.section-secondary p{
+/* -------------- */
+/* Section Pimary */
+/* -------------- */
+.section-primary p {
   color: #F5F5F5;
 }
 
-.section-secondary a:link{
+.section-primary a:link {
   color: #fbb13c;
 }
 
-.section-secondary a:visited{
+.section-primary a:visited {
   color: #fbb13c;
 }
 
-.section-secondary a:hover{
-  color: #EA4C4C;;
+.section-primary a:hover {
+  color: #EA4C4C;
+  ;
 }
 
-.section-secondary a:active{
-  color: #EA4C4C;;
+.section-primary a:active {
+  color: #EA4C4C;
+  ;
 }
 
-.section-secondary mark{
+.section-primary mark {
   color: #fbb13c;
   background: none;
 }
 
-
-section:nth-of-type(2n) {
-  background-color: white
+/* ----------------- */
+/* Section Secondary */
+/* ----------------- */
+.section-secondary {
+  background-color: #0E2431;
 }
+
+.section-secondary h5 {
+  color: #F5F5F5;
+  padding-top: 1em;
+}
+
+.section-secondary p {
+  color: #F5F5F5;
+}
+
+.section-secondary small {
+  color: #bbbbbb;
+}
+
+.section-secondary a:link {
+  color: #bbbbbb;
+}
+
+.section-secondary a:visited {
+  color: #bbbbbb /*#fbb13c*/;
+}
+
+.section-secondary a:hover {
+  color: #EA4C4C;
+  ;
+}
+
+.section-secondary a:active {
+  color: #EA4C4C;
+  ;
+}
+
+.section-secondary mark {
+  color: #fbb13c;
+  background: none;
+}
+
 
 /* https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ */
 /* phone-only */
@@ -113,6 +168,7 @@ section:nth-of-type(2n) {
   .medium-word {
     font-size: 1.7em;
   }
+
   p {
     font-size: 1.2em;
   }
@@ -131,6 +187,7 @@ section:nth-of-type(2n) {
   .medium-word {
     font-size: 1.7em;
   }
+
   p {
     font-size: 1.2em;
   }
@@ -154,19 +211,4 @@ section:nth-of-type(2n) {
   p {
     font-size: 1.5em;
   }
-}
-
-.grid-display {
-  display: grid;
-  /*number of column: auto-fill (=as much space as possible), size of each column: min is 200px, max is 1fraction.*/
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 1em;
-  grid-auto-rows: minmax(100px, auto)
-}
-
-.container>div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
 }
