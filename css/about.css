@@ -33,7 +33,7 @@
 @media screen and (min-width: 800px) {
     .about-grid {
         grid-auto-flow: column;
-        row-gap: 5px;
+        row-gap: 15px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto auto auto;
         justify-items: center;
