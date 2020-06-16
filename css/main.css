@@ -27,6 +27,16 @@ p {
   line-height: 1.4em;
 }
 
+/*This needs to be combined with another rule that defines "background-image: ...*/
+.icon{
+	/* Only one icon */
+	background-repeat: no-repeat; 
+	background-position: center right;
+	background-size: contain;
+	/* Reserve some space after the link, so the background image do not overlap with the text.*/
+	padding-right: 21px;
+}
+
 p:last-of-type {
   margin-bottom: 0;
 }

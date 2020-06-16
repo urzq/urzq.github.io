@@ -2,18 +2,31 @@
     display: grid;
     column-gap: 40px;
     row-gap: 10px;
-    /* grid-template-rows: 20px 20px 20px; */
 }
 
+.github-icon {
+    background-image: url("../img/github_icon.png");
+}
 
+.linkedin-icon {
+    background-image: url("../img/linkedin_icon.png");
+}
+
+.phone-icon{
+    background-image: url("../img/phone_icon.png");
+}
+
+.email-icon{
+    background-image: url("../img/email_icon.png");
+}
 
 @media screen and (max-width: 799px) {
     .about-grid {
         grid-auto-flow: row;
         row-gap: 10px;
         grid-template-columns: 1;
-        /* grid-template-rows: repeat(9, 20px); */
-        /* grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px; */
+        justify-content: center;
+        justify-items: left;
     }
 }
 
@@ -23,5 +36,6 @@
         row-gap: 5px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto auto auto;
+        justify-items: center;
     }
 }

@@ -18,7 +18,7 @@
 .process-card {
     position: relative;
     padding: 10px;
-    min-height: 240px;
+    min-height: 150px;
     background-color: white;
     
     border: 1px solid #EFEFEF;
