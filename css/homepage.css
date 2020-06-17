@@ -28,19 +28,7 @@ section:first-child {
   background-position: bottom right;
 }
 
-/* phone-only */
-@media screen and (max-width: 599px) {
-  .homepage-flex {
-    flex-direction: column;
-  }
-
-  #profile-pic {
-    background-image: url("../img/profile_pic_small.jpg");
-  }
-}
-
-/* tablet-portrait-up */
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 899px) {
   .homepage-flex {
     flex-direction: column;
   }
@@ -54,17 +42,6 @@ section:first-child {
 @media screen and (min-width: 900px) {
   .homepage-flex {
     flex-direction: row;
-  }
-
-  #profile-pic {
-    background-image: url("../img/profile_pic_big.jpg");
-  }
-}
-
-/* desktop-up  */
-@media screen and (min-width: 1200px) {
-  .medium-word {
-    font-size: 2em;
   }
 
   #profile-pic {

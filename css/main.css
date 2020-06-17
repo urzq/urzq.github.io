@@ -11,34 +11,44 @@ html {
   box-sizing: border-box;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
+}
+
+h1 {
   font-family: 'Nunito', sans-serif;
 }
 
-h5 {
-  margin: 0;
+h2,
+h3 {
+  margin-bottom: 2em;
+  font-family: 'Raleway', sans-serif;
 }
 
 p {
-  margin: 0;
   margin-bottom: 1em;
   font-size: 1.2em;
   line-height: 1.4em;
 }
 
-/*This needs to be combined with another rule that defines "background-image: ...*/
-.icon{
-	/* Only one icon */
-	background-repeat: no-repeat; 
-	background-position: center right;
-	background-size: contain;
-	/* Reserve some space after the link, so the background image do not overlap with the text.*/
-	padding-right: 21px;
-}
-
 p:last-of-type {
   margin-bottom: 0;
+}
+
+/*This needs to be combined with another rule that defines "background-image: ...*/
+.icon {
+  /* Only one icon */
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  /* Reserve some space after the link, so the background image do not overlap with the text.*/
+  padding-right: 21px;
 }
 
 .medium-padding {
@@ -53,11 +63,6 @@ article {
   margin-right: auto;
 }
 
-.big-word {
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-}
-
 mark {
   color: #EA4C4C;
   background: none;
@@ -67,14 +72,15 @@ section {
   background-color: white;
 }
 
+/* -------------- */
+/* Section Pimary */
+/* -------------- */
 .section-primary {
   background-color: #28536b;
 }
 
-/* -------------- */
-/* Section Pimary */
-/* -------------- */
-.section-primary p {
+.section-primary p,
+.section-primary h3 {
   color: #F5F5F5;
 }
 
@@ -126,7 +132,9 @@ section {
 }
 
 .section-secondary a:visited {
-  color: #bbbbbb /*#fbb13c*/;
+  color: #bbbbbb
+    /*#fbb13c*/
+  ;
 }
 
 .section-secondary a:hover {
@@ -144,7 +152,6 @@ section {
   background: none;
 }
 
-
 /* https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ */
 /* phone-only */
 @media screen and (max-width: 599px) {
@@ -152,11 +159,11 @@ section {
     font-size: 3.4em;
   }
 
-  .big-word {
+  h2 {
     font-size: 2.7em;
   }
 
-  .medium-word {
+  h3 {
     font-size: 1.5em;
   }
 
@@ -171,11 +178,11 @@ section {
     font-size: 5em;
   }
 
-  .big-word {
+  h2 {
     font-size: 4.5em;
   }
 
-  .medium-word {
+  h3 {
     font-size: 1.7em;
   }
 
@@ -190,11 +197,11 @@ section {
     font-size: 6em;
   }
 
-  .big-word {
+  h2 {
     font-size: 4.5em;
   }
 
-  .medium-word {
+  h3 {
     font-size: 1.7em;
   }
 
@@ -210,11 +217,11 @@ section {
     font-size: 7em;
   }
 
-  .big-word {
+  h2 {
     font-size: 6em;
   }
 
-  .medium-word {
+  h3 {
     font-size: 2.0em;
   }
 
