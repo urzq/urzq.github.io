@@ -12,11 +12,11 @@
     background-image: url("../img/linkedin_icon.png");
 }
 
-.phone-icon{
+.phone-icon {
     background-image: url("../img/phone_icon.png");
 }
 
-.email-icon{
+.email-icon {
     background-image: url("../img/email_icon.png");
 }
 
@@ -24,9 +24,9 @@
     .about-grid {
         grid-auto-flow: row;
         row-gap: 10px;
-        grid-template-columns: 1;
-        justify-content: center;
+        grid-template-columns: auto;
         justify-items: left;
+        justify-content: center;
     }
 }
 
@@ -37,5 +37,6 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto auto auto;
         justify-items: center;
+        justify-content: center;
     }
 }
