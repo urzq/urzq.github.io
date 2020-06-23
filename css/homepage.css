@@ -1,10 +1,24 @@
-section:first-child {
+#homepage {
+  /*Position the scroll arrow relative to this section.*/
+  position: relative;
   height: 100vh;
   background-color: #F5F5F5;
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
 }
+
+#homepage a {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#homepage a:hover, #homepage a:active {
+  transform: translateX(-50%) translateY(10%);
+}
+
 
 .homepage-flex {
   /* Make this container occupy the full section' space. */

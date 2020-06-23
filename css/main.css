@@ -5,6 +5,7 @@ html {
   color: #0E2431;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 0.07em;
+  scroll-behavior: smooth;
 }
 
 * {
