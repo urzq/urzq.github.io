@@ -52,10 +52,6 @@ p:last-of-type {
   padding-right: 21px;
 }
 
-.medium-padding {
-  padding: 2em;
-}
-
 article {
   /* top right bottom left; */
   padding: 6em 2em 6em 2em;
@@ -227,6 +223,6 @@ section {
   }
 
   p {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }

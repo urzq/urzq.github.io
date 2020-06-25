@@ -1,0 +1,87 @@
+/* Based on https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535 */
+
+#navigation {
+    background-color: #0E2431;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li {
+    /*Remove the bullet.*/
+    list-style-type: none;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: #F5F5F5;
+    /* Remove the underline */
+    text-decoration: none;
+    outline: 0;
+    margin: 20px;
+}
+
+.menu a:hover,
+.menu a:active {
+    color: #EA4C4C;
+}
+
+.logo {
+    /*The logo will expand as much as possible*/
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.toggle {
+    order: 1;
+
+    /* Vertical center of menu icon. */
+    flex-direction: column;
+    display: none;
+}
+
+@media screen and (max-width: 799px) {
+    .toggle {
+        order: 1;
+        /*Align the home icon and the title.*/
+        display: flex;
+    }
+
+    .item {
+        order: 2;
+        /* Because of this, each item will overflow, and appear on its own line */
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px rgb(173, 173, 173) solid;
+        display: none;
+
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .active .item {
+        display: block;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}

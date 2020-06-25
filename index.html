@@ -9,31 +9,44 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/homepage.css">
   <link rel="stylesheet" href="css/open-to-web.css">
   <link rel="stylesheet" href="css/process.css">
   <link rel="stylesheet" href="css/about.css">
+  <script src="js/navigation.js" defer></script>
 </head>
 
 <body>
-  <section id="homepage">
 
-    <div class="homepage-flex">
-      <div class="homepage-flex-item medium-padding">
-        <h1>CLEMENT LENHOF</h1>
-        <h2>Developpeur <mark>Freelance</mark></h2>
-      </div>
-
-      <div id="profile-pic" class="homepage-flex-item">
-      </div>
-    </div>
-    
-    <a href="#offer"><img src="svg/scroll_arrow.svg" alt=""></a>
-
+  <section id="navigation" class="sticky">
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a href="#"><img src="svg/logo.svg"> </a></li>
+        <li class="item"><a href="#offer">Offre</a></li>
+        <li class="item"><a href="#experience">Experience</a></li>
+        <li class="item"><a href="#about">Contact</a></li>
+        <li class="toggle"><a href="javascript:void(0)"><img src="feather_icon/menu.svg"></a></li>
+      </ul>
+    </nav>
   </section>
 
-  <section id ="offer">
+  <section id="homepage">
+    <div class="homepage-flex" id="homepage-pic">
+
+      <div class="homepage-flex-item center-catch-phrase">
+        <h2>Un programmeur expérimenté</h2>
+        <h2>Pour remplir vos objectifs</h2>
+      </div>
+
+      <a href="#offer"><img src="svg/scroll_arrow.svg" alt=""></a>
+    </div>
+  </section>
+
+  <section id="offer">
     <article>
+      <h3>Offre</h3>
+
       <p>Besoin d'un développeur expérimenté ? J'apporte 7 ans d'expertise dans le
         <mark>développement logiciel</mark> pour vous permettre de remplir vos objectifs.
       </p>
@@ -44,7 +57,7 @@
     </article>
   </section>
 
-  <section class="section-primary">
+  <section id="experience" class="section-primary">
     <article>
       <h3>Experience</h3>
       <p>
@@ -71,15 +84,19 @@
 
 
   <section>
-    <article class="otw-flex">
-      <p class="otw-flex-item">
-        Lors de ma dernière mission, j'ai réalisé une API web REST en C# .Net Core, et rajouté des features
-        sur du front-end en Angular.
-      </p>
+    <article>
+      <h3>
+        Je fais aussi du web !
+      </h3>
 
-      <img class="otw-flex-item otw-flex-item-image" src="svg/web.svg" alt="A server seding and html page"
-        height=200px />
-
+      <div class="otw-flex">
+        <p class="otw-flex-item">
+          Lors de ma dernière mission, j'ai réalisé une API web REST en C# .Net Core, et rajouté des features
+          sur du front-end en Angular.
+        </p>
+        <img class="otw-flex-item otw-flex-item-image" src="svg/web.svg" alt="A server seding and html page"
+          height=200px />
+      </div>
     </article>
   </section>
 
@@ -91,28 +108,28 @@
       <div class="process-grid">
 
         <div class="process-card process-card-flex">
-          <img src="svg/analysis.svg" alt="Une personne qui discutent" width=100px />
+          <img src="svg/analysis.svg" alt="Une personne qui discutent" />
           <div class="process-card-text">
             Analyse de votre besoin
           </div>
         </div>
 
         <div class="process-card process-card-flex">
-          <img src="svg/puzzle.svg" alt="Des pièces de puzzle qui s'imbriquent" width=100px />
+          <img src="svg/puzzle.svg" alt="Des pièces de puzzle qui s'imbriquent" />
           <div class="process-card-text">
             Proposition d'une solution
           </div>
         </div>
 
         <div class="process-card process-card-flex">
-          <img src="svg/code_editor.svg" alt="Un editeur de code" width=100px />
+          <img src="svg/code_editor.svg" alt="Un editeur de code" />
           <div class="process-card-text">
             Ecriture du code
           </div>
         </div>
 
         <div class="process-card process-card-flex">
-          <img src="svg/polish.svg" alt="Des pixels qui s'emboitent parfaitement" width=100px />
+          <img src="svg/polish.svg" alt="Des pixels qui s'emboitent parfaitement" />
           <div class="process-card-text">
             Fignolages divers et variés
 
@@ -120,14 +137,14 @@
         </div>
 
         <div class="process-card process-card-flex">
-          <img src="svg/quality_test.svg" alt="Un microscope." width=100px />
+          <img src="svg/quality_test.svg" alt="Un microscope." />
           <div class="process-card-text">
             Tests de qualité
           </div>
         </div>
 
         <div class="process-card process-card-flex">
-          <img src="svg/delivery.svg" alt="Un carton de livraison" width=100px />
+          <img src="svg/delivery.svg" alt="Un carton de livraison" />
           <div class="process-card-text">
             Livraisons régulières
           </div>
@@ -138,7 +155,7 @@
     </article>
   </section>
 
-  <section class="section-secondary">
+  <section id="about" class="section-secondary">
     <article class="about-grid">
       <h5>LOCALISATION</h5>
       <small>J'habite à Bordeaux</small>
