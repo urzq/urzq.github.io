@@ -69,6 +69,15 @@ section {
   background-color: white;
 }
 
+/* https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
+a.anchor {
+  display: block;
+  position: relative;
+  /*As much space as the navigation bar height.*/
+  top: -63px;
+  visibility: hidden;
+}
+
 /* -------------- */
 /* Section Pimary */
 /* -------------- */

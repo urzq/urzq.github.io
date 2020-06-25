@@ -1,5 +1,4 @@
 #homepage {
-  /*Position the scroll arrow relative to this section.*/
   height: 70vh;
   background-color: #F5F5F5;
   background-repeat: no-repeat;
@@ -31,7 +30,7 @@
   height: 100%;
   
   /*As much space as the navigation bar height.*/
-  margin-top: 76px;
+  margin-top: 63px;
 
 }
 

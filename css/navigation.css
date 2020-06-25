@@ -28,7 +28,7 @@ ul {
     /* Remove the underline */
     text-decoration: none;
     outline: 0;
-    margin: 20px;
+    margin: 10px;
 }
 
 .menu a:hover,
