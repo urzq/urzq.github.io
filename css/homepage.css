@@ -19,8 +19,7 @@
   margin: 0;
   font-family: 'Nunito', sans-serif;
   color: white;
-  font-size: 3em;
-
+  text-align: center;
   /* offset-x | offset-y | blur-radius | color */
   text-shadow: 2px 2px 4px black;
 }
