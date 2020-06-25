@@ -10,10 +10,6 @@
   outline: none;
 }
 
-#homepage a:hover, #homepage a:active {
-  transform: translateY(10%);
-}
-
 #homepage h2 {
   margin: 0;
   font-family: 'Nunito', sans-serif;
