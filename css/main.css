@@ -47,7 +47,7 @@ p:last-of-type {
   /* Only one icon */
   background-repeat: no-repeat;
   background-position: center right;
-  background-size: contain;
+  background-size: 16px;
   /* Reserve some space after the link, so the background image do not overlap with the text.*/
   padding-right: 21px;
 }
@@ -76,6 +76,10 @@ a.anchor {
   /*As much space as the navigation bar height.*/
   top: -63px;
   visibility: hidden;
+}
+
+.justify-right {
+  justify-self: right;
 }
 
 /* -------------- */
@@ -129,7 +133,7 @@ a.anchor {
   color: #F5F5F5;
 }
 
-.section-secondary small {
+.section-secondary {
   color: #bbbbbb;
 }
 
