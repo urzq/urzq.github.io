@@ -15,3 +15,12 @@ function toggleMenu() {
 }
 
 toggle.addEventListener('click', toggleMenu);
+
+let items = document.querySelectorAll('#navigation .item');
+
+debugger
+
+for (item in items) {
+    let ahref = items[item].querySelector('a');
+    ahref.addEventListener('click', toggleMenu);
+}

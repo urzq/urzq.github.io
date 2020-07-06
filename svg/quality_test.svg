@@ -38,9 +38,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="218.63553"
-     inkscape:cx="-4.3676704"
-     inkscape:zoom="1.4142136"
+     inkscape:cy="149.05943"
+     inkscape:cx="13.69395"
+     inkscape:zoom="2.0000001"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -55,7 +55,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,32 +66,32 @@
      transform="translate(-88.881626,-26.250652)">
     <path
        d="m 122.34656,34.724851 v 5.39987 h 5.9461 V 55.322402 H 110.4484 v 5.354166 h 8.16247 l 3.796,9.790779 H 96.911365 v 8.2798 h 36.857185 v -5.39987 -2.87993 -9.790779 -1.76902 -3.559836 -0.02531 -20.597551 h -5.22834 -0.24755 z"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect833" />
     <rect
        y="52.851772"
-       x="106.15378"
+       x="106.68296"
        height="2.4250951"
        width="21.838839"
        id="rect844"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round" />
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
     <ellipse
        ry="3.2137229"
        rx="3.205338"
        cy="62.375862"
        cx="128.48325"
        id="path865"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round" />
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
     <ellipse
        ry="1.6296481"
        rx="1.6251919"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="circle869"
        cx="128.48325"
        cy="62.375862" />
     <path
        id="rect873"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 114.18835,29.757851 v -1.468446 0 h 8.10637 v 13.11054 h -8.10637 v -7.835808" />
     <rect
        y="44.020294"
@@ -99,24 +99,24 @@
        height="3.9599044"
        width="3.2314684"
        id="rect877"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round" />
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
     <path
        id="path879"
        d="m 116.86787,44.079918 -2.63409,-2.609162"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        id="path883"
        d="m 119.88279,43.98446 2.34846,-2.545523"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect885"
        width="3.2314684"
        height="1.1024733"
        x="116.6258"
        y="47.980198" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:none;stroke:#000000;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect887"
        width="3.2314684"
        height="3.9599044"
@@ -128,7 +128,7 @@
        height="1.6677016"
        width="3.237596"
        id="rect889"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:none;stroke:#000000;stroke-width:0.52916739;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        transform="matrix(-0.52377085,0.8518592,-0.85063439,-0.52575768,0,0)" />
     <rect
        y="-114.85252"
@@ -136,7 +136,7 @@
        height="5.9901123"
        width="3.237596"
        id="rect891"
-       style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:none;stroke:#000000;stroke-width:0.52916739;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        transform="matrix(-0.52377085,0.8518592,-0.85063439,-0.52575768,0,0)" />
   </g>
 </svg>
