@@ -22,13 +22,20 @@
 #homepage-pic {
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   height: 100%;
   
   /*As much space as the navigation bar height.*/
   margin-top: 63px;
 
 }
+
+@supports (background-attachment: fixed) {
+  #homepage-pic {
+    /* background-attachment: fixed; */
+  }
+}
+
 
 .homepage-flex {
   display: flex;
