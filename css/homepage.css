@@ -1,7 +1,5 @@
 #homepage {
-  height: 70vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 70);
-
+  height: 70vh; 
   background-color: #F5F5F5;
   background-repeat: no-repeat;
   background-position: right bottom;
