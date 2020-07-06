@@ -1,12 +1,12 @@
 #homepage {
-  height: 70vh; 
+  height: 70vh;
   background-color: #F5F5F5;
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
 }
 
-#homepage a{
+#homepage a {
   outline: none;
 }
 
@@ -24,7 +24,7 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   height: 100%;
-  
+
   /*As much space as the navigation bar height.*/
   margin-top: 63px;
 
@@ -32,14 +32,14 @@
 
 @supports (background-attachment: fixed) {
   #homepage-pic {
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
   }
 }
 
 
 .homepage-flex {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -56,7 +56,7 @@
   flex-grow: 1;
 }
 
-.center-catch-phrase{
+.center-catch-phrase {
   display: flex;
   flex-direction: column;
   /*Alignement along the main axis*/
@@ -65,7 +65,7 @@
 }
 
 @media screen and (max-width: 899px) {
-  #homepage-pic{
+  #homepage-pic {
     background-image: url("../img/background_small.jpg");
   }
 }
