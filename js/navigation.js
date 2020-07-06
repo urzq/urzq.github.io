@@ -1,5 +1,3 @@
-console.log("navigation ouéoué  ");
-
 const toggle = document.querySelector('.toggle');
 const menu = document.querySelector('.menu');
 const navigation = document.querySelector('nav');
