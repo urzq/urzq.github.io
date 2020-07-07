@@ -30,13 +30,6 @@
 
 }
 
-@supports (background-attachment: fixed) {
-  #homepage-pic {
-    background-attachment: fixed;
-  }
-}
-
-
 .homepage-flex {
   display: flex;
   flex-direction: column;
