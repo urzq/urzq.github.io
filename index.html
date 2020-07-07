@@ -11,8 +11,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/homepage.css">
-  <link rel="stylesheet" href="css/open-to-web.css">
-  <link rel="stylesheet" href="css/process.css">
+  <link rel="stylesheet" href="css/offer.css">
   <link rel="stylesheet" href="css/about.css">
   <script src="js/navigation.js" defer></script>
 </head>
@@ -23,7 +22,7 @@
     <nav>
       <ul class="menu">
         <li class="logo"><a href="#"><img src="svg/logo.svg"> </a></li>
-        <li class="item"><a href="#offer">OFFRE</a></li>
+        <li class="item"><a href="#offer">SERVICES</a></li>
         <li class="item"><a href="#experience">EXPERIENCE</a></li>
         <li class="item"><a href="#about">CONTACT</a></li>
         <li class="toggle"><a href="javascript:void(0)"><img src="feather_icon/menu.svg"></a></li>
@@ -39,12 +38,12 @@
         <h2>pour remplir vos objectifs</h2>
       </div>
 
-      <a href="#offer"><img src="svg/scroll_arrow.svg" alt=""></a>
+      <a href="#presentation"><img src="svg/scroll_arrow.svg" alt=""></a>
     </div>
   </section>
 
-  <a id="offer" class="anchor"></a>
-  <section class="anchor" id="offer">
+  <a id="presentation" class="anchor"></a>
+  <section id="presentation">
     <article>
       <p>Je suis Clément Lenhof, un programmeur <mark>Freelance</mark> avec 7 ans d'expérience dans le
         <mark>développement logiciel</mark>.
@@ -56,130 +55,83 @@
     </article>
   </section>
 
-  <a id="experience" class="anchor"></a>
-  <section id="experience" class="section-primary">
+  <a id="offer" class="anchor"></a>
+  <section id="offer">
     <article>
-      <h3>Expérience</h3>
-      <p>
-        J'ai eu l'occasion de travailler dans 2 grands secteurs durant ma carrière.
-      </p>
-      <p>
-        D'abord dans le <mark>jeu vidéo</mark>, avec Ubisoft, pour des jeux mobile. Puis avec Mobigame, sur <a
-          href="https://apps.apple.com/fr/app/zombie-tsunami/id529652920">Zombie Tsunami</a>, un jeu à très gros
-        succès (100 millions de téléchargements).
-      </p>
-      <p>
-        Par la suite, dans la <mark>3D</mark>, <mark><abbr title="Réalité Virtuelle">RV</abbr> </mark> et
-        <mark><abbr title="Réalité Augmentée">RA</abbr></mark> avec une ESN appelée
-        Theoris.
-        J'y ai fait de la R&D sur un projet militaire, et de la maintenance sur un des logiciels d'Airbus, déployé à l'échelle Européenne.
-      </p>
+      <h3>Services</h3>
+      <div class="offer-grid">
+        <img src="svg/native_application.svg" alt="todo" />
+        <h4>APPLICATION NATIVE</h4>
+        <div>
+          <p>Création d'outils spécifiques, logiciels sur mesure. Performances, Robustesse et Qualité.</p>
+        </div>
 
-      <p>
-        Télécharger le <a class="icon-url" href="/pdf/cv_lenhof.pdf" download>CV de Clément Lenhof</a>.
-      </p>
-    </article>
-  </section>
-
-  <section id="webdev">
-    <article>
-      <h3>
-        Je fais aussi du web !
-      </h3>
-
-      <div class="otw-flex">
-        <p class="otw-flex-item">
-          Lors de ma dernière mission, j'ai réalisé une API web REST en C# .Net Core, et rajouté des features
-          sur du front-end en Angular.
-        </p>
-        <img class="otw-flex-item otw-flex-item-image" src="svg/web.svg" alt="A server seding and html page"
-          height=200px />
+        <img src="svg/web.svg" alt="todo" />
+        <h4>DEVELOPPEMENT WEB</h4>
+        <div>
+          <p>Python, C# .Net Core, typescript, Angular... Peut importe la techno, je maintiens et fais évoluer votre
+            application.</p>
+        </div>
+        <img src="svg/video_game.svg" alt="todo" />
+        <h4>JEU VIDEO</h4>
+        <div>
+          <p>J'interviens sur la partie Gameplay, Engine ou Tool, pour vous aider à Shipper votre jeu.</p>
+        </div>
       </div>
-
     </article>
   </section>
-
 
   <section>
-    <article>
-      <h3>Notre futur process de travail</h3>
+    <a id="experience" class="anchor"></a>
+    <section id="experience" class="section-primary">
+      <article>
+        <h3>Expérience</h3>
+        <p>
+          J'ai eu l'occasion de travailler dans 2 grands secteurs durant ma carrière.
+        </p>
+        <p>
+          D'abord dans le <mark>jeu vidéo</mark>, avec Ubisoft, pour des jeux mobile. Puis avec Mobigame, sur <a
+            href="https://apps.apple.com/fr/app/zombie-tsunami/id529652920">Zombie Tsunami</a>, un jeu à très gros
+          succès (100 millions de téléchargements).
+        </p>
+        <p>
+          Par la suite, dans la <mark>3D</mark>, <mark><abbr title="Réalité Virtuelle">RV</abbr> </mark> et
+          <mark><abbr title="Réalité Augmentée">RA</abbr></mark> avec une ESN appelée
+          Theoris.
+          J'y ai fait de la R&D sur un projet militaire, et de la maintenance sur un des logiciels d'Airbus, déployé à
+          l'échelle Européenne.
+        </p>
 
-      <div class="process-grid">
+        <p>
+          Télécharger le <a class="icon-url" href="/pdf/cv_lenhof.pdf" download>CV de Clément Lenhof</a>.
+        </p>
+      </article>
+    </section>
 
-        <div class="process-card process-card-flex">
-          <img src="svg/analysis.svg" alt="Une personne qui discutent" />
-          <div class="process-card-text">
-            1- Analyse de votre besoin
-          </div>
+    <section id="about" class="section-secondary">
+      <article class="about-grid">
+        <h5>ONLINE</h5>
+
+        <a href="https://www.linkedin.com/in/clément-lenhof-0a57a64b" class="icon linkedin-icon">LinkedIn</a>
+
+        <a href="https://github.com/urzq/" class="icon github-icon">github</a>
+
+        <h5 class="second-col">CONTACT</h5>
+        <div class="second-col">
+          Bordeaux.
         </div>
 
-        <div class="process-card process-card-flex">
-          <img src="svg/puzzle.svg" alt="Des pièces de puzzle qui s'imbriquent" />
-          <div class="process-card-text">
-            2- Proposition d'une solution
-          </div>
+        <div class="second-col">
+          06 47 12 32 15
+        </div>
+        <div class="second-col">
+          clement.lenhof@gmail.com
         </div>
 
-        <div class="process-card process-card-flex">
-          <img src="svg/code_editor.svg" alt="Un editeur de code" />
-          <div class="process-card-text">
-            3- Ecriture du code
-          </div>
-        </div>
+        <img class="justify-right" src="img/portrait.jpg">
 
-        <div class="process-card process-card-flex">
-          <img src="svg/polish.svg" alt="Des pixels qui s'emboitent parfaitement" />
-          <div class="process-card-text">
-            4- Ajustements
-
-          </div>
-        </div>
-
-        <div class="process-card process-card-flex">
-          <img src="svg/quality_test.svg" alt="Un microscope." />
-          <div class="process-card-text">
-            5- Tests de qualité
-          </div>
-        </div>
-
-        <div class="process-card process-card-flex">
-          <img src="svg/delivery.svg" alt="Un carton de livraison" />
-          <div class="process-card-text">
-            6- Livraisons régulières
-          </div>
-        </div>
-
-      </div>
-      </div>
-    </article>
-  </section>
-
-  <section id="about" class="section-secondary">
-    <article class="about-grid">
-
-
-      <h5>ONLINE</h5>
-
-      <a href="https://www.linkedin.com/in/clément-lenhof-0a57a64b" class="icon linkedin-icon">LinkedIn</a>
-
-      <a href="https://github.com/urzq/" class="icon github-icon">github</a>
-
-      <h5 class="second-col">CONTACT</h5>
-      <div class="second-col">
-        Bordeaux.
-      </div>
-
-      <div class="second-col">
-        06 47 12 32 15
-      </div>
-      <div class="second-col">
-        clement.lenhof(at)gmail.com
-      </div>
-
-      <img class="justify-right" src="img/portrait.jpg">
-
-    </article>
-  </section>
+      </article>
+    </section>
 </body>
 
 </html>

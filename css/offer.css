@@ -1,0 +1,29 @@
+#offer{
+    background-color: #F5F5F5;
+}
+
+
+.offer-grid {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 50px;
+    justify-items: center;
+    align-items: start;
+}
+
+@media screen and (max-width: 899px) {
+    .offer-grid {
+        grid-auto-flow: row;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 899px) {
+    .offer-grid {
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        justify-content: stretch;
+    }
+}
