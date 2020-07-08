@@ -9,11 +9,14 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/homepage.css">
   <link rel="stylesheet" href="css/offer.css">
   <link rel="stylesheet" href="css/about.css">
+
   <script src="js/navigation.js" defer></script>
+  <script src="js/animation.js" defer></script>
 </head>
 
 <body>
@@ -38,13 +41,13 @@
         <h2>pour remplir vos objectifs</h2>
       </div>
 
-      <a href="#presentation"><img src="svg/scroll_arrow.svg" alt=""></a>
+      <a href="#presentation"><img class="bounce" src="svg/scroll_arrow.svg" alt=""></a>
     </div>
   </section>
 
   <a id="presentation" class="anchor"></a>
   <section id="presentation">
-    <article>
+    <article class="fade-in paused-animation">
       <p>Je suis Clément Lenhof, un programmeur <mark>Freelance</mark> avec 7 ans d'expérience dans le
         <mark>développement logiciel</mark>.
       </p>
@@ -57,29 +60,35 @@
 
   <a id="offer" class="anchor"></a>
   <section id="offer">
-    
+
     <!-- Kinda lame... The article tag is used here just to align correctly the title -->
     <article>
-      <h3>Services</h3>
+      <h3 class="fade-in-up paused-animation">Services</h3>
     </article>
 
     <div class="offer-grid">
-      <img src="svg/native_application.svg" alt="todo" />
-      <h4>APPLICATION NATIVE</h4>
+      <img class="fade-in-up paused-animation" src="svg/native_application.svg" alt="todo" />
+      <h4 class="fade-in-up paused-animation">APPLICATION NATIVE</h4>
       <div>
-        <p>Création d'outils spécifiques, logiciels sur mesure. Performances, Robustesse et Qualité.</p>
+        <p class="fade-in-up paused-animation">Création d'outils spécifiques, logiciels sur mesure.
+          Performances,
+          Robustesse et Qualité.</p>
       </div>
 
-      <img src="svg/web.svg" alt="todo" />
-      <h4>DEVELOPPEMENT WEB</h4>
+      <img class="fade-in-up paused-animation" src="svg/web.svg" alt="todo" />
+      <h4 class="fade-in-up paused-animation">DEVELOPPEMENT WEB</h4>
       <div>
-        <p>Python, C# .Net Core, typescript, Angular... Peut importe la techno, je maintiens et fais évoluer votre
+        <p class="fade-in-up paused-animation">Python, C# .Net Core, typescript, Angular... Peut importe la
+          techno, je
+          maintiens et fais évoluer votre
           application.</p>
       </div>
-      <img src="svg/video_game.svg" alt="todo" />
-      <h4>JEU VIDEO</h4>
+      <img class="fade-in-up paused-animation" src="svg/video_game.svg" alt="todo" />
+      <h4 class="fade-in-up paused-animation">JEU VIDEO</h4>
       <div>
-        <p>J'interviens sur la partie Gameplay, Engine ou Tool, pour vous aider à Shipper votre jeu.</p>
+        <p class="fade-in-up paused-animation">J'interviens sur la partie Gameplay, Engine ou Tool, pour vous
+          aider à
+          Shipper votre jeu.</p>
       </div>
     </div>
     </article>
@@ -89,16 +98,16 @@
     <a id="experience" class="anchor"></a>
     <section id="experience" class="section-primary">
       <article>
-        <h3>Expérience</h3>
-        <p>
+        <h3 class="fade-in paused-animation">Expérience</h3>
+        <p class="fade-in paused-animation">
           J'ai eu l'occasion de travailler dans 2 grands secteurs durant ma carrière.
         </p>
-        <p>
+        <p class="fade-in paused-animation">
           D'abord dans le <mark>jeu vidéo</mark>, avec Ubisoft, pour des jeux mobile. Puis avec Mobigame, sur <a
             href="https://apps.apple.com/fr/app/zombie-tsunami/id529652920">Zombie Tsunami</a>, un jeu à très gros
           succès (100 millions de téléchargements).
         </p>
-        <p>
+        <p class="fade-in paused-animation">
           Par la suite, dans la <mark>3D</mark>, <mark><abbr title="Réalité Virtuelle">RV</abbr> </mark> et
           <mark><abbr title="Réalité Augmentée">RA</abbr></mark> avec une ESN appelée
           Theoris.
@@ -106,7 +115,7 @@
           l'échelle Européenne.
         </p>
 
-        <p>
+        <p class="fade-in paused-animation">
           Télécharger le <a class="icon-url" href="/pdf/cv_lenhof.pdf" download>CV de Clément Lenhof</a>.
         </p>
       </article>

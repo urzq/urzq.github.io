@@ -2,9 +2,10 @@
     background-color: #F5F5F5;
 }
 
-#offer article{
+#offer article {
     padding-bottom: 0;
 }
+
 .offer-grid {
     display: grid;
     column-gap: 10px;
@@ -21,6 +22,7 @@
 
 }
 
+
 @media screen and (max-width: 899px) {
     .offer-grid {
         grid-auto-flow: row;
@@ -32,6 +34,10 @@
 }
 
 @media screen and (min-width: 899px) {
+    #offer p {
+        text-align: center;
+    }
+
     .offer-grid {
         grid-auto-flow: column;
         grid-template-columns: repeat(3, auto);

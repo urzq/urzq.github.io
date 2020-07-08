@@ -8,6 +8,13 @@
     box-shadow: 0px 2px 10px #0E2431;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -79,10 +86,4 @@ ul {
     .active .item {
         display: block;
     }
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
 }
