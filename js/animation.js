@@ -1,3 +1,5 @@
+'use strict';
+
 //  https://stackoverflow.com/questions/487073/how-to-check-if-element-is-visible-after-scrolling?page=1&tab=votes#tab-top
 
 // this is the target which is observed
