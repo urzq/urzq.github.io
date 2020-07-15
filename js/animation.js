@@ -15,13 +15,12 @@ let intersectionObserverOptions = {
 let observer = new IntersectionObserver(onIntersection, intersectionObserverOptions);
 
 // provide the observer with a target
-for (let i = 0; i < targets.length; i++) {
-    observer.observe(targets[i]);
+for (let target of targets) {
+    observer.observe(target);
 }
 
 function onIntersection(entries) {
-    entries.forEach(entry => {
-
+    for (let entry of entries) {
         // If we are in the viewport
         if (entry.intersectionRatio > 0) {
             entry.target.classList.remove('paused-animation');
@@ -29,5 +28,5 @@ function onIntersection(entries) {
             // Stop watching 
             observer.unobserve(entry.target);
         }
-    });
+    }
 }

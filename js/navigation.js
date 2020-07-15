@@ -20,7 +20,7 @@ toggle.addEventListener('click', toggleMenu);
 
 let items = document.querySelectorAll('#navigation .item');
 
-for (let i = 0; i < items.length; i++) { 
-    let ahref = items[i].querySelector('a');
+for (let item of items) {
+    let ahref = item.querySelector('a');
     ahref.addEventListener('click', toggleMenu);
 }
