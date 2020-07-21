@@ -9,9 +9,37 @@
 
   <title>Démos</title>
 </head>
+ <style>
+    body {
+      margin: 0;
+      background-color: #F5F5F5;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    #threejs {
+      /*16/9*/
+      width: 64vw;
+      height: 36vw;
+      margin: 100px;
+      padding: 0px;
+
+      /*offset x, offset y, blur radius, color*/
+      box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
 
 <body>
-  WIP...
+  <!-- <script src="node_modules/three/build/three.js"></script> -->
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/three.js/r118/three.min.js></script>
+  <script src="js/sticky_sphere.js" defer> </script>
+
+  <div id="threejs">
+  </div>
+
 </body>
 
 </html>
