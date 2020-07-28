@@ -1,8 +1,4 @@
-"strict";
-
-let renderer, camera, scene, light;
-let normalizedMousePos = new THREE.Vector3(0, 0, 0);
-const frustumSize = 1;
+"use strict";
 
 // All the spheres are lying on this plane.
 const plane = new THREE.Plane(new THREE.Vector3(0, 0, -1), 0);
@@ -18,17 +14,19 @@ const sphereDescriptors = [
   new SphereDescriptor(-0.68, -0.12, 0.2, 0xe65100),
 ];
 
+// The sphere we control with the mouse.
 const mainSphereDescriptor = new SphereDescriptor(0, 0, 0.2, 0x37474f);
-let mainSphere;
+
+let renderer, camera, scene, light, mainSphere;
+let normalizedMousePos = new THREE.Vector3(0, 0, 0);
 
 init();
 render();
 
 function init() {
-  const canvas = document.querySelector("#c");
+  const canvas = document.querySelector("canvas");
   const width = canvas.clientWidth;
   const height = canvas.clientHeight;
-  const aspectRatio = width / height;
 
   renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
   renderer.setSize(width, height, false);
@@ -37,9 +35,9 @@ function init() {
 
   canvas.addEventListener(
     "touchmove",
-    function (e) {
-      var touch = e.touches[0];
-      var mouseEvent = new MouseEvent("mousemove", {
+    (e) => {
+      const touch = e.touches[0];
+      const mouseEvent = new MouseEvent("mousemove", {
         clientX: touch.clientX,
         clientY: touch.clientY,
       });
@@ -48,28 +46,19 @@ function init() {
     false
   );
 
-  camera = new THREE.OrthographicCamera(
-    (-aspectRatio * frustumSize) / 2,
-    (aspectRatio * frustumSize) / 2,
-    frustumSize / 2,
-    -frustumSize / 2,
-    /*near*/ 0,
-    /*far*/ 10
-  );
   camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-
   camera.position.set(0, 0, 3);
   camera.lookAt(0, 0, 0);
 
   scene = new THREE.Scene();
   scene.background = new THREE.Color(1, 1, 1);
 
-  const color = 0xffffff;
-  light = new THREE.PointLight(color, 0.7);
+  const lightColor = 0xffffff;
+  light = new THREE.PointLight(lightColor, 0.7);
   light.position.set(0, 0, 1);
   scene.add(light);
 
-  const ambientLight = new THREE.AmbientLight(color, 0.6);
+  const ambientLight = new THREE.AmbientLight(lightColor, 0.6);
   scene.add(ambientLight);
 
   for (const sphereDescriptor of sphereDescriptors) {
@@ -116,49 +105,16 @@ function render() {
     camera.updateProjectionMatrix();
   }
 
-  const xRatio = (normalizedMousePos.x + 1) / 2;
-  const angle = THREE.MathUtils.lerp(
-    (5 * Math.PI) / 8,
-    (3 * Math.PI) / 8,
-    xRatio
-  );
-  const hypotenuse = 1.3;
-  const x = Math.cos(angle) * hypotenuse;
-  const z = Math.sin(angle) * hypotenuse;
+  tiltCamera();
 
-  camera.position.set(x, 0, z);
-  camera.lookAt(0, 0, 0);
-  camera.updateMatrixWorld(true);
+  const mouseWorldPos = unprojectMouseIntoPlane();
+  mainSphere.position.copy(mouseWorldPos);
+  light.position.set(mouseWorldPos.x, mouseWorldPos.y, 1);
 
-  let rayStart = normalizedMousePos.clone();
-  // The point is unprojected onto the near plane.
-  rayStart.z = -1.0;
-  rayStart.unproject(camera);
-
-  let rayEnd = normalizedMousePos.clone();
-  // The point is unprojected onto the far plane.
-  rayEnd.z = 1.0;
-  rayEnd.unproject(camera);
-
-  const camRay = new THREE.Line3(rayStart, rayEnd);
-  let target = new THREE.Vector3();
-  plane.intersectLine(camRay, target);
-
-  mainSphere.position.copy(target);
-  light.position.set(mainSphere.position.x, mainSphere.position.y, 1);
-
-  let minDist = Number.MAX_VALUE;
-
-  for (const sphereDescriptor of sphereDescriptors) {
-    const dist = sphereDescriptor.distanceToPoint(mainSphere.position);
-    if (dist < minDist) {
-      minDist = dist;
-    }
-  }
-  mainSphere.scale.setScalar(minDist);
+  const distanceToClosestSphere = computeDistanceToClosestSphere(mainSphere.position);
+  mainSphere.scale.setScalar(distanceToClosestSphere);
 
   renderer.render(scene, camera);
-
   requestAnimationFrame(render);
 }
 
@@ -175,12 +131,60 @@ function resizeRendererToDisplaySize(renderer) {
   return needResize;
 }
 
-function onMouseMove(event) {
-  // Make the sphere follow the mouse
-  let x = event.pageX - event.currentTarget.offsetLeft;
-  let y = event.pageY - event.currentTarget.offsetTop;
-  let w = event.currentTarget.offsetWidth;
-  let h = event.currentTarget.offsetHeight;
+// Change slighly the camera's position based on where the mouse cursor is on the screen.
+function tiltCamera() {
+  // [0, 1]
+  const xRatio = (normalizedMousePos.x + 1) / 2;
+  const angle = THREE.MathUtils.lerp(
+    (5 * Math.PI) / 8,
+    (3 * Math.PI) / 8,
+    xRatio
+  );
+  const hypotenuse = 1.3;
+  const x = Math.cos(angle) * hypotenuse;
+  const z = Math.sin(angle) * hypotenuse;
 
-  normalizedMousePos = new THREE.Vector3((x / w) * 2 - 1, -(y / h) * 2 + 1, 1);
+  camera.position.set(x, 0, z);
+  camera.lookAt(0, 0, 0);
+  camera.updateMatrixWorld(true);
+}
+
+function unprojectMouseIntoPlane() {
+  let rayStart = normalizedMousePos.clone();
+  // The point is unprojected into the near plane.
+  rayStart.z = -1.0;
+  rayStart.unproject(camera);
+
+  let rayEnd = normalizedMousePos.clone();
+  // The point is unprojected into the far plane.
+  rayEnd.z = 1.0;
+  rayEnd.unproject(camera);
+
+  const ray = new THREE.Line3(rayStart, rayEnd);
+  const target = new THREE.Vector3();
+  plane.intersectLine(ray, target);
+
+  return target;
+}
+
+function computeDistanceToClosestSphere(position) {
+  let minDist = Number.MAX_VALUE;
+
+  for (const sphereDescriptor of sphereDescriptors) {
+    const dist = sphereDescriptor.distanceToPoint(position);
+    if (dist < minDist) {
+      minDist = dist;
+    }
+  }
+  return minDist;
+}
+
+function onMouseMove(event) {
+  // Convert the mouse position into normalized screen space [-1, +1]
+  const x = event.pageX - event.currentTarget.offsetLeft;
+  const y = event.pageY - event.currentTarget.offsetTop;
+  const width = event.currentTarget.offsetWidth;
+  const height = event.currentTarget.offsetHeight;
+
+  normalizedMousePos = new THREE.Vector3((x / width) * 2 - 1, -(y / height) * 2 + 1, 1);
 }

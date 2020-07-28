@@ -1,0 +1,14 @@
+/* The intent is to use this file with homepage.css */
+
+@media screen and (max-width: 899px) {
+  #homepage-pic {
+    background-image: url("/img/desk_small.jpg");
+  }
+}
+
+/* tablet-landscape-up min-width */
+@media screen and (min-width: 900px) {
+  #homepage-pic {
+    background-image: url("/img/desk_big.jpg");
+  }
+}

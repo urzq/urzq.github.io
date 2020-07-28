@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito|Raleway');
+@import url("https://fonts.googleapis.com/css?family=Nunito|Raleway");
 
 html {
   /*Default color for text*/
-  color: #0E2431;
-  font-family: 'Raleway', sans-serif;
+  color: #0e2431;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 0.07em;
   scroll-behavior: smooth;
 }
@@ -23,13 +23,13 @@ p {
 }
 
 h1 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 h2,
 h3 {
   margin-bottom: 2em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 p {
@@ -61,7 +61,7 @@ article {
 }
 
 mark {
-  color: #EA4C4C;
+  color: #ea4c4c;
   background: none;
 }
 
@@ -91,7 +91,7 @@ a.anchor {
 
 .section-primary p,
 .section-primary h3 {
-  color: #F5F5F5;
+  color: #f5f5f5;
 }
 
 .section-primary a:link {
@@ -103,13 +103,11 @@ a.anchor {
 }
 
 .section-primary a:hover {
-  color: #EA4C4C;
-  ;
+  color: #ea4c4c;
 }
 
 .section-primary a:active {
-  color: #EA4C4C;
-  ;
+  color: #ea4c4c;
 }
 
 .section-primary mark {
@@ -121,16 +119,16 @@ a.anchor {
 /* Section Secondary */
 /* ----------------- */
 .section-secondary {
-  background-color: #0E2431;
+  background-color: #0e2431;
 }
 
 .section-secondary h5 {
-  color: #F5F5F5;
+  color: #f5f5f5;
   padding-top: 1em;
 }
 
 .section-secondary p {
-  color: #F5F5F5;
+  color: #f5f5f5;
 }
 
 .section-secondary {
@@ -142,19 +140,15 @@ a.anchor {
 }
 
 .section-secondary a:visited {
-  color: #bbbbbb
-    /*#fbb13c*/
-  ;
+  color: #bbbbbb;
 }
 
 .section-secondary a:hover {
-  color: #EA4C4C;
-  ;
+  color: #ea4c4c;
 }
 
 .section-secondary a:active {
-  color: #EA4C4C;
-  ;
+  color: #ea4c4c;
 }
 
 .section-secondary mark {
@@ -178,7 +172,7 @@ a.anchor {
   }
 
   p {
-    font-size: 1.0em;
+    font-size: 1em;
   }
 }
 
@@ -218,7 +212,6 @@ a.anchor {
   p {
     font-size: 1.2em;
   }
-
 }
 
 /* desktop-up */
@@ -232,10 +225,34 @@ a.anchor {
   }
 
   h3 {
-    font-size: 2.0em;
+    font-size: 2em;
   }
 
   p {
     font-size: 1.2em;
   }
+}
+
+.thumbnail-container {
+  /*inline: the element width won't grow past its content size.*/
+  display: inline-block;
+  margin-bottom: 3em;
+
+  /*offset x, offset y, blur radius, color*/
+  box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+
+  transition-property: box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+}
+
+.thumbnail-container:hover {
+  /*offset x, offset y, blur radius, color*/
+  box-shadow: 4px 6px 35px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail {
+  /*The image width won't excess its parent container.*/
+  max-width: 100%;
 }

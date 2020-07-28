@@ -9,10 +9,10 @@ const originalNavigationOffsetTop = navigation.offsetTop;
 function toggleMenu() {
     if (menu.classList.contains('active')) {
         menu.classList.remove('active')
-        toggle.querySelector('a').querySelector('img').src = "feather_icon/menu.svg";
+        toggle.querySelector('a').querySelector('img').src = "/feather_icon/menu.svg";
     } else {
         menu.classList.add('active')
-        toggle.querySelector('a').querySelector('img').src = "feather_icon/x.svg";
+        toggle.querySelector('a').querySelector('img').src = "/feather_icon/x.svg";
     }
 }
 

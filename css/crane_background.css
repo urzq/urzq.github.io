@@ -1,0 +1,19 @@
+/* The intent is to use this file with homepage.css */
+
+#homepage-pic{
+  background-position: center;
+}
+
+@media screen and (max-width: 899px) {
+  #homepage-pic {
+    background-image: url("/img/crane_small.jpg");
+  }
+}
+
+/* tablet-landscape-up min-width */
+@media screen and (min-width: 900px) {
+  #homepage-pic {
+    background-image: url("/img/crane_big.jpg");
+  }
+  
+}

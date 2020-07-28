@@ -1,0 +1,87 @@
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Forces les mobiles à ne pas tricher, et à afficher la page en utilisant leur vraie taille en (pseudo) pixels -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Un endroit pour regrouper toutes mes démos techniques." />
+
+  <title>Démos</title>
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/animation.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/navigation.css">
+  <link rel="stylesheet" href="/css/homepage.css">
+  <link rel="stylesheet" href="/css/crane_background.css">
+
+  <script src="/js/navigation.js" defer></script>
+
+</head>
+
+<body>
+  <section id="navigation" class="sticky">
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a href="/index.html"><img src="/svg/logo.svg"> </a></li>
+        <li class="item"><a href="/index.html#offer">SERVICES</a></li>
+        <li class="item"><a href="/index.html#experience">EXPERIENCE</a></li>
+        <li class="item"><a href="/index.html#about">CONTACT</a></li>
+        <li class="item"><a href="/html/demos.html">DEMOS</a></li>
+        <li class="toggle"><a href="javascript:void(0)"><img src="/feather_icon/menu.svg"></a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="homepage">
+    <div class="homepage-flex" id="homepage-pic">
+
+      <div class="homepage-flex-item center-catch-phrase">
+        <h2>Des pixels qui bougent, des algorithmes intéressants...</h2>
+        <h2>Une sélection de démos techniques.</h2>
+      </div>
+
+      <a href="#projects"><img class="bounce" src="/svg/scroll_arrow.svg" alt=""></a>
+    </div>
+  </section>
+
+</body>
+
+<a id="projects" class="anchor"></a>
+<section>
+  <article>
+    <h3>Sticky Spheres</h3>
+
+    <div class="thumbnail-container">
+      <a href="/html/sticky_spheres.html">
+        <img class="thumbnail" src="/img/sticky_spheres.jpg" alt="Des spheres colorées">
+      </a>
+    </div>
+
+    <p>
+      Je me suis inspiré d'une vidéo de <a href="https://www.youtube.com/watch?v=Cp5WWtMoeKg">coding adventure</a>, qui
+      parle de Ray Marching. Le concept est simple: on contrôle une sphere à la souris, ou au touch sur mobile, qui
+      vient grossir de manière à se coller à la sphère la plus proche.
+    </p>
+    <p>
+      Le coeur de l'algorithme repose sur le calcul de la distance entre un point et une sphere. Ce concept peut
+      s'étendre à la distance entre un point et une forme géométrique, par exemple un cube ou un donut.
+    </p>
+    <p>
+      Il s'agit d'un première expérimentation avec la librarie three.js. Pour l'instant tout est logique et bien conçu,
+      et on retrouve les concepts classiques d'un moteur de rendu: scene, camera, mesh, material, light... La
+      documentation est
+      également très bien fournie, tant sur le site officiel que sur d'autres plateformes, comme stackoverflow ou <a
+        href="https://threejsfundamentals.org/">threejsfundamentals</a>.
+
+    <p>Bref, un premier contact agréable.</p>
+
+    <p>
+      Le code source est disponible sur <a href="https://github.com/urzq/urzq.github.io"> mon github</a>, ou tout simplement en ouvrant le débogueur.
+    </p>
+    </p>
+
+  </article>
+</section>
+
+</html>

@@ -1,9 +1,8 @@
+/* Use in conjunction with desk_background or crane_background to have either a desk or a crane image.*/
+
 #homepage {
   height: 70vh;
-  background-color: #F5F5F5;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: contain;
+  background-color: #f5f5f5;
 }
 
 #homepage a {
@@ -12,7 +11,7 @@
 
 #homepage h2 {
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   color: white;
   text-align: center;
   /* offset-x | offset-y | blur-radius | color */
@@ -22,12 +21,12 @@
 #homepage-pic {
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-position: top left;
+
   height: 100%;
 
   /*As much space as the navigation bar height.*/
   margin-top: 63px;
-
 }
 
 .homepage-flex {
@@ -55,17 +54,4 @@
   /*Alignement along the main axis*/
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (max-width: 899px) {
-  #homepage-pic {
-    background-image: url("../img/background_small.jpg");
-  }
-}
-
-/* tablet-landscape-up min-width */
-@media screen and (min-width: 900px) {
-  #homepage-pic {
-    background-image: url("../img/background_big.jpg");
-  }
 }
